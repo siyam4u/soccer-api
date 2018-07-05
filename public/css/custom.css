@@ -1,0 +1,16 @@
+.verticalAlignMiddle {
+    height: 100px;
+    line-height: 100px;
+}
+.verticalAlignMiddle a {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.btn {
+    font-size: 12px;
+    cursor: pointer;
+}
+.form-control {
+    width: 50%;
+}
