@@ -17,7 +17,7 @@ class CreatePlayerTable extends Migration
             $table->increments('id');
             $table->string('first_name','50');
             $table->string('last_name','50');
-            $table->string('image_path');
+            $table->string('image_path')->nullable();
             $table->integer('team_id')->unsigned();
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
             $table->timestamps();

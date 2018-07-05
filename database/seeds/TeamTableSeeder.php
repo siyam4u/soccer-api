@@ -15,8 +15,8 @@ class TeamTableSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('teams')->truncate();
-        DB::table('teams')->insert(array('name' => 'PSV','image_path'=>''));
-        DB::table('teams')->insert(array('name' => 'Ajax','image_path'=>''));
+        DB::table('teams')->insert(array('name' => 'PSV Eindhoven','image_path'=>'avatars\teams\psv.png'));
+        DB::table('teams')->insert(array('name' => 'Ajax Amsterdam','image_path'=>'avatars\teams\ajax.png'));
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }
