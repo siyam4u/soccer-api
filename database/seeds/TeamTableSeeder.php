@@ -17,6 +17,9 @@ class TeamTableSeeder extends Seeder
         DB::table('teams')->truncate();
         DB::table('teams')->insert(array('name' => 'PSV Eindhoven','image_path'=>'avatars\teams\psv.png'));
         DB::table('teams')->insert(array('name' => 'Ajax Amsterdam','image_path'=>'avatars\teams\ajax.png'));
+        DB::table('teams')->insert(array('name' => 'Feyenoord Rotterdam','image_path'=>'avatars\teams\rotterdam.png'));
+        DB::table('teams')->insert(array('name' => 'FC Utrecht','image_path'=>'avatars\teams\utrecht.png'));
+
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }
