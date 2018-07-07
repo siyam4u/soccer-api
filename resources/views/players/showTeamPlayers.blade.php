@@ -13,8 +13,13 @@
                         @foreach($players->players as $player)
                             <div class="row">
                                 <div class="col-md-3"><img class="img-circle" src="{{ url('/') }}/{{$player->image_path}}" /></div>
-                                <div class="col-md-6 verticalAlignMiddle"><span>{{$player->first_name}} {{$player->last_name}}</span></div>
-                                <div class="col-md-3 verticalAlignMiddle"><a href="{{route('players.edit',$player->id)}}" class="btn btn-warning btn-lg">Edit</a> <a href="#" class="btn btn-danger btn-lg">Delete</a></div>
+                                <div class="col-md-4 verticalAlignMiddle"><span>{{$player->first_name}} {{$player->last_name}}</span></div>
+                                <div class="col-md-2 verticalAlignMiddle button-op"><a href="{{route('players.edit',$player->id)}}" class="pull-right btn btn-warning btn-lg">Edit</a></div>
+                                <div class="col-md-3 verticalAlignMiddle button-op">
+                                    {{ Form::open(['method' => 'delete', 'route' => ['Players.Delete', $player->id]]) }}
+                                    {{ Form::submit('Delete', ['class' => 'pull-left btn btn-danger btn-lg']) }}
+                                    {{ Form::close() }}
+                                </div>
                             </div>
                         @endforeach
                     </div>

@@ -133,7 +133,8 @@ class PlayerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->player->delete($id);
+        return redirect()->back();
     }
 
     public function showTeamPlayers (TeamRepository $teamRepository, $id) {

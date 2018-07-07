@@ -24,7 +24,9 @@ Route::delete('teams/{id}', [
     'uses' => 'TeamController@destroy',
     'as' => 'Teams.Delete'
 ]);
+Route::delete('players/{id}', [
+    'uses' => 'PlayerController@destroy',
+    'as' => 'Players.Delete'
+]);
 Route::get('/teams/{id}/players', 'PlayerController@showTeamPlayers');
 Route::resource('players', 'PlayerController');
-
-

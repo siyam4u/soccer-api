@@ -10,10 +10,10 @@
                         <div class="row">
                             <div class="col-md-3"><img class="img-circle" src="{{ url('/') }}/{{$team->image_path}}" /></div>
                             <div class="col-md-4 verticalAlignMiddle"><span><a  href="{{URL::to('teams/'.$team->id.'/players')}}">{{$team->name}}</a></span></div>
-                            <div class="col-md-2 verticalAlignMiddle">
+                            <div class="col-md-2 verticalAlignMiddle button-op">
                                 <a href="{{route('teams.edit',$team->id)}}" class="pull-right btn btn-warning btn-lg">Edit</a>
                             </div>
-                            <div class="col-md-3 verticalAlignMiddle">
+                            <div class="col-md-3 verticalAlignMiddle button-op">
                                 {{ Form::open(['method' => 'delete', 'route' => ['Teams.Delete', $team->id]]) }}
                                 {{ Form::submit('Delete', ['class' => 'pull-left btn btn-danger btn-lg']) }}
                                 {{ Form::close() }}
